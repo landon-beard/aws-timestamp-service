@@ -1,11 +1,3 @@
-variable "api_name" {
-  description = "Name for the API Gateway"
-}
-
-variable "api_resource_id" {
-  description = "Resource ID for the API Gateway"
-}
-
 resource "aws_api_gateway_rest_api" "api" {
   name        = var.api_name
   description = "API for timestamp retrieval"

@@ -9,3 +9,7 @@ variable "api_name" {
 variable "api_resource_id" {
   description = "Resource ID for the API Gateway"
 }
+
+variable "sns_topic_arn" {
+  description = "ARN of the SNS topic to receive alarm notifications"
+}
