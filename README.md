@@ -15,6 +15,7 @@ This repository contains Terraform configurations for deploying and managing AWS
   - **cloudwatch/**: Module for configuring CloudWatch events and alarms.
   - **api_gateway/**: Module for setting up an API Gateway.
   - **alarms/**: Module for creating CloudWatch alarms.
+  - **rate_limiting/**: Module for configuring rate limiting/throttling settings for the API Gateway.
 
 ## Deployment Instructions and Dependencies
 
@@ -43,3 +44,11 @@ To tear down the deployed infrastructure:
 
 Ensure you have appropriate permissions and configurations set up in your AWS account to deploy and manage the resources.
 
+## Rate Limiting
+
+To implement rate limiting/throttling for your API Gateway, you can use the `rate_limiting` module provided in this repository. This module allows you to configure rate limiting settings such as request limits, burst limits, and rate limits for your API Gateway endpoints.
+
+## Lambda Function Code
+
+- **lambda/retriever/main.py**: Python code for the retriever Lambda function. This function retrieves files from an S3 bucket.
+- **lambda/uploader/main.py**: Python code for the uploader Lambda function. This function uploads files to an S3 bucket.
